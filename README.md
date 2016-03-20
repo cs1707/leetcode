@@ -1,1 +1,5 @@
-This is a repository created by [leetcode-ext](https://chrome.google.com/webstore/detail/leetcode-ext/eomonjnamkjeclchgkdchpabkllmbofp?utm_source=chrome-ntp-icon). Codes here are commited from leetcode.com.
+##leetcode
+
+|#     | Title | Solution | Difficulty |
+| ---- | ----- | -------- | ---------- |
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | [js](https://github.com/cs1707/leetcode/blob/master/1-Two-Sum/solution.js) | Easy |
