@@ -16,30 +16,43 @@ var addTwoNumbers = function(l1, l2) {
     var sum = 0
     var carry = 0
     var l3
+    var current
+    
     while(l1 != null || l2 != null) {
-        if(l1) {
-            v1 = l1.val
-            l1 = l1.next
-        }
+        l1 = getListNode(l1)
+        l2 = getListNode(l2)
         
-        if(l2) {
-            v2 = l2.val
-            l2 = l2.next
-        }
+        v1 = l1.val
+        l1 = l1.next
+        
+        v2 = l2.val
+        l2 = l2.next
         
         sum = carry + v1 + v2
         var node = new ListNode(sum % 10)
-        if(!l3) {
-            l3 = node
+        if(current) {
+            current.next = node
+            current = current.next
         } else {
-            l3.next = node
+            current = node
+            l3 = current
         }
         
         carry = Math.floor(sum / 10)
     }
+    
     if(carry > 0) {
-        l3.next = new ListNode(carry)
+        current.next = new ListNode(carry)
     }
     return l3
 };
+
+function getListNode(listNode) {
+    
+    if(listNode) {
+        return listNode
+    }
+    
+    return new ListNode(0)
+}
 
