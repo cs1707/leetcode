@@ -11,32 +11,24 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    var v1 = 0
-    var v2 = 0
-    var sum = 0
-    var carry = 0
-    var l3
-    var current
+    var sum = l1.val + l2.val
+    l1 = l1.next
+    l2 = l2.next
+    var carry = Math.floor(sum / 10)
+    var result = new ListNode(sum % 10)
+    var current = result
     
     while(l1 != null || l2 != null) {
         l1 = getListNode(l1)
         l2 = getListNode(l2)
+    
+        sum = carry + l1.val + l2.val
         
-        v1 = l1.val
-        l1 = l1.next
-        
-        v2 = l2.val
-        l2 = l2.next
-        
-        sum = carry + v1 + v2
         var node = new ListNode(sum % 10)
-        if(current) {
-            current.next = node
-            current = current.next
-        } else {
-            current = node
-            l3 = current
-        }
+        current.next = node
+        current = current.next
+        l1 = l1.next
+        l2 = l2.next
         
         carry = Math.floor(sum / 10)
     }
@@ -44,7 +36,7 @@ var addTwoNumbers = function(l1, l2) {
     if(carry > 0) {
         current.next = new ListNode(carry)
     }
-    return l3
+    return result
 };
 
 function getListNode(listNode) {
