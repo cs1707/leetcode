@@ -3,8 +3,8 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-    var last = -1
-    var map = {}
+    var last = -1 // 上次重复字符位置
+    var map = {}  // 存储字符的最新位置
     var max = 0
     
     for(var i = 0; i < s.length; i++) {
