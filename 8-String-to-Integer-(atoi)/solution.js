@@ -27,7 +27,7 @@ var myAtoi = function(str) {
             }
         } else {
             if(r > (INT_MAX - digit) / 10) {
-                return INT_MAXT
+                return INT_MAX
             }
         }
         r = r * 10 + digit
