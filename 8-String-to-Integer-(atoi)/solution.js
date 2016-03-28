@@ -22,7 +22,7 @@ var myAtoi = function(str) {
             r * 10 + digit > INT_MAX    => r > (INT_MAX - digit) / 10
          */
         if(isNegative) {
-            if(r < (INT_MIN - digit) / 10) {
+            if(-r < (INT_MIN - digit) / 10) {
                 return INT_MIN
             }
         } else {
