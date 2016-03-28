@@ -10,7 +10,7 @@ var reverse = function(x) {
     while (x !== 0) {
         // 检查溢出
         n = x % 10
-        if ((MAX - n) / 10) > r || (MIN - n) / 10 < r) {
+        if ((MAX - n) / 10 > r || (MIN - n) / 10 < r) {
             return 0
         }
         r = r * 10 + n
