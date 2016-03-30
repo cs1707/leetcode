@@ -12,7 +12,7 @@ var isPalindrome = function(x) {
         r = r * 10 + y % 10
         y = parseInt(y / 10)
     }
-    if (r === y) {
+    if (r === x) {
         return true
     }
     return false
