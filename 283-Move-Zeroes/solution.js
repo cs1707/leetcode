@@ -8,12 +8,13 @@ var moveZeroes = function(nums) {
     for (var i = 0; i < nums.length; i++) {
         if (nums[i] === 0) {
             zeroCount++
-        } else {
+        } else if(zeroCount > 0) {
             nums[i - zeroCount] = nums[i]
+            nums[i] = 0
         }
     }
     
-    for (var j = zeroCount; j > 0; j--) {
-        nums[nums.length - j] = 0
-    }
+    // for (var j = zeroCount; j > 0; j--) {
+    //     nums[nums.length - j] = 0
+    // }
 };
