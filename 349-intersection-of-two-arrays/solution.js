@@ -8,8 +8,8 @@ var intersection = function(nums1, nums2) {
     var map2 = convertToMap(nums2)
     var result = []
     for (var num in map1) {
-        if (map[num]) {
-            result.push(num)
+        if (map2[num]) {
+            result.push(+num)
         }
     }
     return result
@@ -18,7 +18,7 @@ var intersection = function(nums1, nums2) {
 function convertToMap(arr) {
     var map = {}
     for (var i = 0; i < arr.length; i++) {
-        map[i] = true
+        map[arr[i]] = true
     }
     return map
 }
