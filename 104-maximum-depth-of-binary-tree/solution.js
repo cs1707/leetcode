@@ -21,10 +21,10 @@ var maxDepth = function(root) {
     return num
     
     function travel(root, level) {
-        if (!root) {
-            num = max(num, level);
-            return
-        }
+        // if (!root) {
+        //     num = Math.max(num, level);
+        //     return
+        // }
         if(!root.left && !root.right) {
             num = Math.max(num, level)
             return
