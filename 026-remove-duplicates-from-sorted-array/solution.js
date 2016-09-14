@@ -5,9 +5,9 @@
 var removeDuplicates = function(nums) {
     var j = 0
     for (var i = 1; i < nums.length; i++) {
-        if (a[j] !== a[i]) {
+        if (nums[j] !== nums[i]) {
             j++
-            a[j] = a[i]
+            nums[j] = nums[i]
         }
     }
     nums.length = j + 1
