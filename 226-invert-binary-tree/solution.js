@@ -18,9 +18,5 @@ var invertTree = function(root) {
     root.right = invertTree(root.left)
     root.left = invertTree(temp)
     
-    // var temp = root.left
-    // root.left = root.right
-    // root.right = temp
-   
     return root
 };
