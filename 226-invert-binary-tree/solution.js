@@ -11,7 +11,7 @@
  */
 var invertTree = function(root) {
     if (!root) {
-        return root
+        return null
     }
     
     root.right = invertTree(root.left)
