@@ -14,12 +14,13 @@ var invertTree = function(root) {
         return null
     }
     
+    var temp = root.right
     root.right = invertTree(root.left)
-    root.left = invertTree(root.right)
+    root.left = invertTree(temp)
     
-    var temp = root.left
-    root.left = root.right
-    root.right = root.temp
+    // var temp = root.left
+    // root.left = root.right
+    // root.right = temp
    
     return root
 };
