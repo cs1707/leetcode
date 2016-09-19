@@ -16,8 +16,8 @@ var reverseList = function(head) {
         if (next) {
             next.next = node
             head = next
+            node.next = node.next.next
         }
-        node.next = node.next.next
         node = node.next
     }
     return head
