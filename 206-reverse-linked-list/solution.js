@@ -13,8 +13,10 @@ var reverseList = function(head) {
     var node = head
     while (node) {
         var next = node.next
-        next.next = node
-        head = next
+        if (next) {
+            next.next = node
+            head = next
+        }
         node.next = node.next.next
         node = node.next
     }
