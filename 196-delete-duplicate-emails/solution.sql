@@ -1,3 +1,3 @@
 # Write your MySQL query statement below
 DELETE a FROM Person a
-WHERE Id NOT IN (SELECT Id FROM Person GROUP BY Email ORDER BY Id ASC);
+WHERE a.Id NOT IN (SELECT b.Id FROM Person b GROUP BY b.Email ORDER BY b.Id ASC);
