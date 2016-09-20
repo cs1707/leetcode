@@ -1,2 +1,4 @@
 # Write your MySQL query statement below
-SELECT Name AS Employee FROM (SELECT Name, MAX(Salary) FROM Employee WHERE ManagerId IS NOT NULL);
+SELECT a.Name AS Employee FROM Employee a
+INNER JOIN Employee b
+ON a.managerId = b.Id AND a.Salary > b.Salary;
