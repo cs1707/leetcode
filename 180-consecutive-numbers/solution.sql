@@ -1,8 +1,7 @@
 # Write your MySQL query statement below
-SELECT Num AS ConsecutiveNums 
-FROM Logs a
+SELECT a.Id FROM Logs a
 INNER JOIN Logs b
-ON a.Id + 1 = b.Id 
-AND a.Num = b.Num
-GROUP BY a.Num
-HAVING COUNT(a.Num) >= 3;
+ON a.Id + 1 = b.Id
+INNER JOIN Logs c
+ON a.Id + 2 = c.Id
+GROUP BY Num;
