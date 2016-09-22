@@ -15,7 +15,7 @@ var convertToTitle = function(n) {
         } else {
             char = String.fromCharCode(64 + r)
         }
-        result = char + reslut
+        result = char + result
     }
     return result
 };
